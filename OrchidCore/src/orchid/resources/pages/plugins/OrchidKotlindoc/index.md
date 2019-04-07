@@ -1,17 +1,10 @@
 ---
-official: true
+from: docs.plugin_index
 description: Embed Kotlin and Java documentation in your Orchid site using Dokka.
 images:
   - src: https://res.cloudinary.com/orchid/image/upload/c_crop,g_north,h_1402,w_2666/c_scale,e_blur:150,w_300/v1550346159/plugins/kotlindoc.jpg
     alt: Javadoc
     caption: Photo by Federico Bottos on Unsplash
-menu:
-  - type: 'page'
-    itemId: 'Orchid Kotlindoc'
-  - type: 'pageChildren'
-    itemId: 'Orchid Kotlindoc'
-    asSubmenu: true
-    submenuTitle: Docs
 ---
 
 ### Using Orchid with Dokka
@@ -29,12 +22,12 @@ can add [{{ 'meta/kotlindoc.index.json'|baseUrl }}]({{ 'meta/kotlindoc.index.jso
 `config.yml` so that your docs will link out to the Orchid doc pages. This works with class pages generated from either
 the Javadoc or Kotlindoc plugins.
 
-{% highlight 'yaml' %}
+```yaml
 services:
   generators:
     externalIndices:
       - '{{ 'meta/kotlindoc.index.json'|baseUrl }}'
-{% endhighlight %}
+```
 
 Orchid itself is written in Kotlin and documented with this Kotlindoc plugin. You can preview the generated 
 documentation {{anchor('here', 'com.eden.orchid')}}.
@@ -48,18 +41,18 @@ arguments you wish.
 First, you may specify the `--kotlindocClasspath` flag to Orchid, which will forward this value to Dokka's `-classpath`
 arg. Example usage when running Orchid from Gradle looks like the following:
 
-{% highlight 'groovy' %}
+```groovy
 orchid {
     ...
     args = ["--kotlindocClasspath", getModuleClasspathString()]
 }
-{% endhighlight %}
+```
 
 In addition, you may specify a full list of args in your `config.yml` which will be passed-through to Dokka. 
 
-{% highlight 'yaml' %}
+```yaml
 kotlindoc:
   args:
     - '-classpath'
     - '...'
-{% endhighlight %}
+```

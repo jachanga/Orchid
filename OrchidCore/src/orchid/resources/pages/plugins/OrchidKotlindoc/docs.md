@@ -1,7 +1,6 @@
 ---
+from: docs.plugin_api
 title: Kotlindoc API
-template: page
-skipTaxonomy: true
 components:
   - type: pageContent
   - type: pluginDocs
@@ -9,11 +8,4 @@ components:
     tableLeaderClass: hidden
     packageNames: 
       - com.eden.orchid.kotlindoc
-menu:
-  - type: 'page'
-    itemId: 'Orchid Kotlindoc'
-  - type: 'pageChildren'
-    itemId: 'Orchid Kotlindoc'
-    asSubmenu: true
-    submenuTitle: Docs
 ---

@@ -1,5 +1,6 @@
 ---
-theme: Editorial
+theme: 
+  from: 'theme.demo.Editorial'
 template: 'page'
 layout: 'index'
 skipTaxonomy: true

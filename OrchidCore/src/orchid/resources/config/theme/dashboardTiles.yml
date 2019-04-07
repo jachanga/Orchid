@@ -1,0 +1,32 @@
+- title: ''
+  parentNodes:
+    - width: 3
+      vertical: true
+      childrenNodes:
+        - link: 'https://orchid.netlify.com/wiki/user-manual/getting-started/quickstart#gradle'
+          title: 'Gradle'
+          subtitle: 'Get started using Gradle'
+          color: success
+        - link: 'https://orchid.netlify.com/wiki/user-manual/getting-started/quickstart#maven'
+          title: 'Maven'
+          subtitle: 'Get started using Maven'
+          color: success
+    - width: 6
+      vertical: true
+      childrenNodes:
+        - title: 'What is Orchid?'
+          subtitle: 'Learn why you should choose Orchid for your documentation site.'
+          excerpt: 'Orchid seamlessly replaces Jekyll, Gitbook, Algolia, Javadoc, '
+          color: primary
+          link: '#'
+    - width: 3
+      vertical: true
+      childrenNodes:
+        - link: 'https://orchid.netlify.com/wiki/user-manual/getting-started/quickstart#kscript'
+          title: 'KScript'
+          subtitle: 'Get started using KScript'
+          color: success
+        - link: 'https://app.netlify.com/start/deploy?repository=https://github.com/JavaEden/OrchidStarter'
+          title: 'Deploy to Netlify'
+          subtitle: 'Create a new Orchid site in less than 5 minutes'
+          color: success

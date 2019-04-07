@@ -1,7 +1,52 @@
-{% extends 'includes/termArchive-group-baseLinked' %}
+<div class="box">
+  <div style="position: relative;">
+    <h2 class="title is-1 is-spaced">{{ page.title }}</h2>
+    <p class="subtitle is-4">{{ page.description }}</p>
 
-{% block cardBody %}
-<div class="plugin-preview">
-    <img class="img-responsive" src="{{ page.get('thumbnail') }}" alt="{{ page.title }}">
+    {# desktop stuff #}
+    <div class="is-hidden-touch" style="position: absolute; top: 0; right: 0;">
+      <div>
+        <a href="https://github.com/JavaEden/Orchid">
+          <i class="fab fa-github" aria-hidden="true"></i>
+          <span>JavaEden/Orchid</span>
+        </a>
+      </div>
+    </div>
+
+    {# mobile sepcific stuff #}
+    <div class="is-hidden-desktop">
+      <a href="https://github.com/JavaEden/Orchid" style="margin-right: 12px; white-space: nowrap">
+        <i class="fab fa-github" aria-hidden="true"></i>
+        <span>JavaEden/Orchid</span>
+      </a>
+    </div>
+
+    <hr>
+  </div>
+
+  <div class="content is-medium">
+
+  </div>
 </div>
-{% endblock %}
+
+
+
+<div class="columns is-multiline is-centered">
+{% for pageItem in page.pageList %}
+  <div class="column is-half-desktop is-one-third-widescreen is-one-quarter-fullhd">
+
+    <div class="box is-paddingless">
+      <div class="border-bottom" style="padding: 0.75rem 1.25rem; margin-bottom: 0.75rem;">
+        <h2 class="subtitle" style="white-space: nowrap;">{{ pageItem.title }}</h2>
+      </div>
+      <figure class="image image is-3by2">
+        {% set previewImage = pageItem.get('images')|first %}
+        <img src="{{ previewImage.src }}" alt="{{ pageItem.title }}" title="{{ pageItem.title }}" style="border-radius: 0 0 6px 6px;">
+      </figure>
+    </div>
+
+  </div>
+{% endfor %}
+</div>
+
+

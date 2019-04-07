@@ -4,14 +4,17 @@ taxonomies:
     setAsPageParent: true
     plugins:
       orderByDirection: asc
+      permalink: ':term/:archiveIndex'
       orderBy:
         - 'title'
     themes:
       orderByDirection: asc
+      permalink: ':term/:archiveIndex'
       orderBy:
         - 'title'
     bundles:
       orderByDirection: asc
+      permalink: ':term/:archiveIndex'
       orderBy:
         - 'title'
   - key: tags
@@ -25,10 +28,7 @@ taxonomies:
 taxonomyArchivePages:
   searchIndices:
     - 'pages'
-  extraCss:
-    - 'assets/css/plugins.scss'
 termArchivePages:
+  layout: noBoxNoTitle
   searchIndices:
     - 'pages'
-  extraCss:
-    - 'assets/css/plugins.scss'

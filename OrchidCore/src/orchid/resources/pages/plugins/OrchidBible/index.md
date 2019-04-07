@@ -1,18 +1,11 @@
 ---
-official: true
+from: docs.plugin_index
 noDocs: true
 description: Load the full text of Bible verses quickly and easily.
 images:
   - src: https://res.cloudinary.com/orchid/image/upload/c_scale,w_300,e_blur:150/v1524973072/plugins/bible.jpg
     alt: Bible
     caption: Photo by Priscilla Du Preez on Unsplash
-menu:
-  - type: 'page'
-    itemId: 'Orchid Bible'
-  - type: 'pageChildren'
-    itemId: 'Orchid Bible'
-    asSubmenu: true
-    submenuTitle: Docs
 ---
 
 ### Adding Bible verses
@@ -24,20 +17,20 @@ of the [available versions on Bibles.org](https://www.bibles.org/versions_api).
 
 As a filter
 
-{% highlight 'jinja' %}
+```jinja
 {% verbatim %}
 {{ "John 3:16"|bible("eng-KJV") }}
 {% endverbatim %}
-{% endhighlight %}
+```
 
 {% if site.isProduction() %}> {{ "John 3:16"|bible("eng-KJV") }}{% endif %}
 
 As a function
 
-{% highlight 'jinja' %}
+```jinja
 {% verbatim %}
 {{ bible("Galatians 2 19-21", "eng-NASB") }}
 {% endverbatim %}
-{% endhighlight %}
+```
 
 {% if site.isProduction() %}> {{ bible("Galatians 2 19-21", "eng-NASB") }}{% endif %}

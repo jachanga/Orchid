@@ -1,7 +1,6 @@
 ---
+from: docs.plugin_api
 title: Javadoc API
-template: page
-skipTaxonomy: true
 components:
   - type: pageContent
   - type: pluginDocs
@@ -9,11 +8,4 @@ components:
     tableLeaderClass: hidden
     packageNames: 
       - com.eden.orchid.javadoc
-menu:
-  - type: 'page'
-    itemId: 'Orchid Javadoc'
-  - type: 'pageChildren'
-    itemId: 'Orchid Javadoc'
-    asSubmenu: true
-    submenuTitle: Docs
 ---

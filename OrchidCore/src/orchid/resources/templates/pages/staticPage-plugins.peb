@@ -1,1 +1,9 @@
-{% extends (official) ? 'includes/officialPlugin' : 'includes/unofficialPlugin' %}
+<div class="box">
+{% include 'includes/pluginPageHeader.peb' with { 'docLink': 'docs', 'docName': 'API Documentation', 'docIcon': 'code' } %}
+
+  <div class="content is-medium">
+  {{ page.content | raw }}
+  </div>
+
+{% include 'includes/dependencyTabs.peb' %}
+</div>

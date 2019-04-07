@@ -24,13 +24,13 @@
     </div>
     <div class="row p">
         <div class="col-md-10 col-md-offset-1">
-{% highlight 'bash' %}
+```bash
 git clone https://github.com/JavaEden/OrchidStarter.git
 cd OrchidStarter
 ./gradlew orchidServe
 
 # View your generated site at http://localhost:8080/
-{% endhighlight %}
+```
         </div>
     </div>
     <div class="row p">
@@ -41,7 +41,7 @@ cd OrchidStarter
     </div>
     <div class="row p">
         <div class="col-md-10 col-md-offset-1">
-{% highlight 'groovy' %}
+```groovy
 plugins {
     id "com.eden.orchidPlugin" version "{{ site.version }}"
 }
@@ -57,7 +57,7 @@ orchid {
     theme   = "{{ theme.key }}"
     baseUrl = "http://localhost:8080"
 }
-{% endhighlight %}
+```
         </div>
     </div>
 </div>

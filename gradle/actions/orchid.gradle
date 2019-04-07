@@ -2,7 +2,7 @@ apply plugin: 'com.eden.orchidPlugin'
 
 orchid {
     runTask = 'build'
-    theme = 'BsDoc'
+    theme = 'Copper'
     version = getActualVersion(project)
     baseUrl = getBaseUrl(project)
     environment = getEnvName(project)

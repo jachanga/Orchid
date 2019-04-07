@@ -1,17 +1,10 @@
 ---
-official: true
+from: docs.plugin_index
 description: Add static full-text search with Lunr.js to any Orchid site
 images:
   - src: https://res.cloudinary.com/orchid/image/upload/c_scale,w_300,e_blur:150/v1524973700/plugins/search.jpg
     alt: Search
     caption: Photo by Louis Blythe on Unsplash
-menu:
-  - type: 'page'
-    itemId: 'Orchid Search'
-  - type: 'pageChildren'
-    itemId: 'Orchid Search'
-    asSubmenu: true
-    submenuTitle: Docs
 ---
 
 ### About Orchid Search

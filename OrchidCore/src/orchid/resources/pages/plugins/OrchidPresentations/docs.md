@@ -1,7 +1,6 @@
 ---
+from: docs.plugin_api
 title: Presentations API
-template: page
-skipTaxonomy: true
 components:
   - type: pageContent
   - type: pluginDocs
@@ -9,11 +8,4 @@ components:
     tableLeaderClass: hidden
     packageNames: 
       - com.eden.orchid.presentations
-menu:
-  - type: 'page'
-    itemId: 'Orchid Presentations'
-  - type: 'pageChildren'
-    itemId: 'Orchid Presentations'
-    asSubmenu: true
-    submenuTitle: Docs
 ---

@@ -5,17 +5,10 @@ sections:
     title: 'Learn'
 
 wikiPages:
-  layout: geopattern2
-  searchIndices:
-    - 'wiki'
+  layout: noBoxNoTitle_menu
+  noDocs: true
 'user-manual':
   menu:
-    - type: 'separator'
-      title: 'In This Page'
-      order: 100
-    - type: 'pageIds'
-      order: 110
-      structure: nested
     - type: 'separator'
       title: 'User Manual'
       order: 1000
@@ -30,3 +23,6 @@ wikiPages:
     - type: 'pageIds'
       order: 110
       structure: nested
+
+indexPages:
+  template: 'wikiIndexPage'

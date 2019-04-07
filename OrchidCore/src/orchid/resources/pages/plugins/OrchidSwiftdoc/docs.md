@@ -1,7 +1,6 @@
 ---
+from: docs.plugin_api
 title: Swiftdoc API
-template: page
-skipTaxonomy: true
 components:
   - type: pageContent
   - type: pluginDocs
@@ -9,11 +8,4 @@ components:
     tableLeaderClass: hidden
     packageNames: 
       - com.eden.orchid.swiftdoc
-menu:
-  - type: 'page'
-    itemId: 'Orchid Swiftdoc'
-  - type: 'pageChildren'
-    itemId: 'Orchid Swiftdoc'
-    asSubmenu: true
-    submenuTitle: Docs
 ---

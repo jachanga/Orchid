@@ -1,17 +1,10 @@
 ---
-official: true
+from: docs.plugin_index
 description: Add Jekyll-like blogging functionality to your Orchid site.
 images:
   - src: https://res.cloudinary.com/orchid/image/upload/c_scale,w_300,e_blur:150/v1524973072/plugins/posts.jpg
     alt: Posts
     caption: Photo by Emma Matthews on Unsplash
-menu:
-  - type: 'page'
-    itemId: 'Orchid Posts'
-  - type: 'pageChildren'
-    itemId: 'Orchid Posts'
-    asSubmenu: true
-    submenuTitle: Docs
 ---
 
 ### Creating Blog Posts
@@ -44,7 +37,7 @@ build a complete hierarchy, where every parent category is also listed as its ow
 
 ### Using Categories
 
-{% highlight 'yaml' %}
+```yaml
 posts:
   baseDir: 'blog'  # (1) 
   categories:
@@ -52,7 +45,7 @@ posts:
     - 'programming'  # (3)
     - 'programming/android'  # (4)
     - 'programming/web'  # (5)
-{% endhighlight %}
+```
 
 1) Looks for the blog posts in `blog/` instead of `posts/`
 2) Creates a category in `{baseDir}/personal`, and every post in that folder will be in the `personal` category
@@ -79,15 +72,15 @@ default values, as shown above; (2) you can set each list item to be a map of co
 the category path; (3) or you can set each list item to be a map with a single property that is the category path, and 
 whose value is a map of configuration values. 
 
-{% highlight 'yaml' %}
+```yaml
 # Method (1), String as category path
 posts: 
   categories:
     - 'personal'
     - 'programming'
-{% endhighlight %}
+```
 
-{% highlight 'yaml' %}
+```yaml
 # Method (2), Map with config values and `key` property as category path
 posts: 
   categories:
@@ -95,9 +88,9 @@ posts:
       title: 'Personal Blog'
     - key: 'programming'
       title: 'programming Blog'
-{% endhighlight %}
+```
 
-{% highlight 'yaml' %}
+```yaml
 # Method (3), Map with only key as category path, and value as config values
 posts: 
   categories:
@@ -105,7 +98,7 @@ posts:
         title: 'Personal Blog'
     - programming:
         title: 'programming Blog'
-{% endhighlight %}
+```
 
 Note that there is no difference between Method (2) and Method (3), it is simply a matter of preference.
 

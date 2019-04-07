@@ -1,18 +1,11 @@
 ---
-official: true
+from: docs.plugin_index
 noDocs: true
 description: Create flowcharts and sequence diagrams using the PlantUML markup language.
 images:
   - src: https://res.cloudinary.com/orchid/image/upload/c_scale,w_300,e_blur:150/v1524974867/plugins/diagrams.jpg
     alt: Diagrams
     caption: Photo by William Iven on Unsplash
-menu:
-  - type: 'page'
-    itemId: 'Orchid Diagrams'
-  - type: 'pageChildren'
-    itemId: 'Orchid Diagrams'
-    asSubmenu: true
-    submenuTitle: Docs
 ---
 
 ### Using PlantUML with Orchid
@@ -36,13 +29,13 @@ The following examples are taken directly from the official [PlantUML docs](http
 
 [source](http://plantuml.com/sequence-diagram)
 
-{% highlight 'text' %}
+```text
 Alice -> Bob: Authentication Request
 Bob --> Alice: Authentication Response
 
 Alice -> Bob: Another authentication Request
 Alice <-- Bob: another authentication Response
-{% endhighlight %}
+```
 
 {% filter compileAs('uml') %}
 Alice -> Bob: Authentication Request
@@ -56,14 +49,14 @@ Alice <-- Bob: another authentication Response
 
 [source](http://plantuml.com/class-diagram)
 
-{% highlight 'text' %}
+```text
 class Dummy {
  -field1
  #field2
  ~method1()
  +method2()
 }
-{% endhighlight %}
+```
 
 {% filter compileAs('uml') %}
 class Dummy {
@@ -78,7 +71,7 @@ class Dummy {
 
 [source](http://plantuml.com/activity-diagram-beta)
 
-{% highlight 'text' %}
+```text
 start
 if (condition A) then (yes)
   :Text 1;
@@ -93,7 +86,7 @@ else (nothing)
   :Text else;
 endif
 stop
-{% endhighlight %}
+```
 
 {% filter compileAs('uml') %}
 start
@@ -116,7 +109,7 @@ stop
 
 [source](http://plantuml.com/state-diagram)
 
-{% highlight 'text' %}
+```text
 scale 350 width
 [*] --> NotShooting
 
@@ -136,7 +129,7 @@ state Configuring {
     State1 -> State2
   }  
 }
-{% endhighlight %}
+```
 
 {% filter compileAs('uml') %}
 scale 350 width
@@ -164,7 +157,7 @@ state Configuring {
 
 [source](http://plantuml.com/timing-diagram)
 
-{% highlight 'text' %}
+```text
 robust "Web Browser" as WB
 concise "Web User" as WU
 
@@ -181,7 +174,7 @@ WB@0 <-> @50 : {50 ms lag}
 0 is Waiting
 +500 is ok
 @200 <-> @+150 : {150 ms}
-{% endhighlight %}
+```
 
 {% filter compileAs('uml') %}
 robust "Web Browser" as WB

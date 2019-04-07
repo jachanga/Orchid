@@ -5,41 +5,31 @@ site:
     avatar: 'assets/media/avatar.jpg'
 
 theme:
-  useSidebarSearch: true
   social:
-    github: 'JavaEden/Orchid'
-    twitter: 'OrchidSSG'
-  primaryColor: '#7E80CF'
-  bannerColor: '#444444'
-  linkColor: '#7E80CF'
-  trianglifyOptions:
-    x_colors: 'BuPu'
-    cell_size: 55
-    seed: 1
+    other:
+      - link: 'https://orchid.netlify.com/'
+        label: 'Home'
+        icon: 'fas fa-home'
+      - link: 'https://github.com/JavaEden/Orchid'
+        label: 'Github'
+        icon: 'fab fa-github'
+      - link: 'https://twitter.com/OrchidSSG'
+        label: 'Twitter'
+        icon: 'fab fa-twitter'
   menu:
     - type: 'page'
-      itemId: 'Quick-Start'
-      title: 'Get Started'
+      title: 'Home'
+      itemId: 'Home'
     - type: 'wikiSections'
-    - type: 'submenu'
-      title: 'Explore'
-      menu:
-        - type: 'taxonomy'
-          taxonomyType: 'group'
-          includeTerms: true
-          termsAtRoot: true
-        - type: 'page'
-          title: 'API Docs'
-          itemId: 'com.eden.orchid'
-        - type: 'page'
-          title: 'Changelog'
-          itemId: 'Changelog'
-    - type: 'link'
-      title: 'Github'
-      url: 'https://github.com/JavaEden/Orchid'
-  extraCss:
-    - 'assets/css/pygments.scss'
-    - 'assets/css/extras.scss'
+    - type: 'page'
+      itemId: 'Changelog'
+  sidebarBackground: 'primary'
+  sidebarBackgroundType: GRADIENT
+  colors:
+    purple: '#7E83C4'
+  palette:
+    primary: 'PURPLE'
+    link: 'BLUE'
 
 services:
   publications:
@@ -52,10 +42,22 @@ kotlindoc:
     - '../../main/java'
     - '../../main/kotlin'
 
+#allPages:
+#  extraCss:
+#    - "inline:sidecar.css: .gitter-chat-embed { margin-top: 50px; }"
+#  extraJs:
+#    - "inline:sidecar.js:((window.gitter = { }).chat = { }).options = { room: 'JavaEden/Orchid' }; "
+#    - "https://sidecar.gitter.im/dist/sidecar.v1.js"
+
 allPages:
   extraCss:
-    - "inline:sidecar.css: .gitter-chat-embed { margin-top: 50px; }"
-  extraJs:
-    - "inline:sidecar.js:((window.gitter = { }).chat = { }).options = { room: 'JavaEden/Orchid' }; "
-    - "https://sidecar.gitter.im/dist/sidecar.v1.js"
-
+    - 'assets/css/plugins.scss'
+  components:
+    - type: "pageContent"
+    - type: "prism"
+      githubTheme: 'duotone-light'
+      languages:
+        - kotlin
+        - java
+        - groovy
+        - yaml

@@ -1,6 +1,3 @@
 staticPages:
-  layout: geopattern
-  searchIndices:
-    - 'pages'
   extraCss:
     - 'assets/css/plugins.scss'
