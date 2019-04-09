@@ -4,21 +4,21 @@
 services:
   generators:
     disabled:
-      - 'javadoc'
-      - 'swiftdoc'
-      - 'kotlindoc'
-      - 'groovydoc'
-#      - 'pages'
-      - 'styleguide'
-      - 'posts'
       - 'changelog'
+      - 'feeds'
       - 'forms'
+      - 'groovydoc'
+      - 'indices'
+      - 'javadoc'
+      - 'kotlindoc'
+      - 'netlifyCms'
+      - 'pages'
+      - 'posts'
       - 'presentations'
       - 'sitemap'
-      - 'indices'
-      - 'feeds'
+      - 'styleguide'
+      - 'swiftdoc'
       - 'taxonomies'
-      - 'netlifyCms'
 
 wiki:
   sections:

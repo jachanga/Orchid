@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html class="homepage">
+<head>
+{% include '?trackingHeadStart' %}
+{% head %}
+{% styles %}
+{% include '?trackingHeadEnd' %}
+</head>
+<body>
+{% include '?trackingBodyStart' %}
+{% page %}
+{% scripts %}
+{% include '?trackingBodyEnd' %}
+</body>
+</html>
