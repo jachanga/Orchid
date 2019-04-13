@@ -1,29 +1,19 @@
-<section class="hero is-light biko">
+<section class="hero is-light">
   <div class="hero-body">
     <div class="section">
-      <h1 class="header-1 has-text-centered">
-        Orchid
-      </h1>
+      <h1 class="header-1 has-text-centered">Orchid</h1>
     </div>
   </div>
 </section>
 
-<section class="section has-background-dark biko">
+<section class="section has-background-dark">
   <div class="container">
-    <h2 class="header-2 has-text-centered">
-      What is Orchid?
-    </h2>
+    <h2 class="header-2 has-text-centered">What is Orchid?</h2>
 
-    <div class="content">
-      <p class="blokk">
-        Donec turpis velit, venenatis ac sollicitudin vitae, bibendum at est. Praesent non velit arcu. Aenean a risus nibh. Pellentesque vitae lorem sit amet erat Fusce convallis quis erat id laoreet. Aliquam erat volutpat.
-      </p>
-      <p class="blokk">
-        Ut iaculis lacinia leo, sed finibus dolor consectetur ut. Curabitur nec elit et ligula porta consectetur eu nec quam. Fusce nulla urna, volutpat sed tristique non, dictum et sem. Ut eleifend dolor sit amet massa pulvinar, nec condimentum ante porttitor. Fusce at tortor id purus dignissim consequat. Ut gravida, felis non pharetra accumsan, tellus massa sagittis dui, non varius augue purus non ex. Ut eleifend pretium eleifend. Nunc asdfasdf fdfgwert t gr asdfsdfasdf r.
-      </p>
-      <p class="blokk">
-        Mauris pulvinar leo enim, ut tincidunt odio suscipit quis. Phasellus augue finibus consequat.
-      </p>
+    <div class="content blokk">
+      <p>Donec turpis velit, venenatis ac sollicitudin vitae, bibendum at est. Praesent non velit arcu. Aenean a risus nibh. Pellentesque vitae lorem sit amet erat Fusce convallis quis erat id laoreet. Aliquam erat volutpat.</p>
+      <p>Ut iaculis lacinia leo, sed finibus dolor consectetur ut. Curabitur nec elit et ligula porta consectetur eu nec quam. Fusce nulla urna, volutpat sed tristique non, dictum et sem. Ut eleifend dolor sit amet massa pulvinar, nec condimentum ante porttitor. Fusce at tortor id purus dignissim consequat. Ut gravida, felis non pharetra accumsan, tellus massa sagittis dui, non varius augue purus non ex. Ut eleifend pretium eleifend. Nunc asdfasdf fdfgwert t gr asdfsdfasdf r.</p>
+      <p>Mauris pulvinar leo enim, ut tincidunt odio suscipit quis. Phasellus augue finibus consequat.</p>
     </div>
 
     <div class="has-text-centered">
@@ -34,78 +24,25 @@
   </div>
 </section>
 
-<section class="section has-background-light biko">
+<section class="section has-background-light">
   <div class="container">
-    <h4 class="header-3 has-text-left">
-      Latest News
-    </h4>
+    <h4 class="header-3 has-text-left">Latest News</h4>
   </div>
 </section>
 
-<section class="section has-background-dark biko">
+<section class="section has-background-dark">
   <div class="container">
-    <h2 class="header-2 has-text-centered">
-      Ready to Get Started?
-    </h2>
-    <h4 class="header-4 has-text-centered">
-      Let's make something beautiful
-    </h4>
+    <h2 class="header-2 has-text-centered">Ready to Get Started?</h2>
+    <h4 class="header-4 has-text-centered">Let's make something beautiful</h4>
 
     <div class="getting-started-card">
-      <div class="card-container">
-        <div class="box card-shadow">
-          <div class="shadow-text">
-            Click to view
-            <i class="fas fa-angle-double-down"></i>
-          </div>
-        </div>
-        <div class="box">
-          <figure class="image is-3by2">
-            <img src="{{ "assets/media/undraw_knowledge_g5gf.svg" | asset }}">
-          </figure>
-          <h4 class="header-4 has-text-centered">
-            Knowledge Base
-          </h4>
-        </div>
-      </div>
+    {% include 'blocks/previewCard.peb' with {'title': 'Knowledge Base', 'mediaFile': 'undraw_knowledge_g5gf.svg'} %}
     </div>
-
     <div class="getting-started-card">
-      <div class="card-container">
-        <div class="box card-shadow">
-          <div class="shadow-text">
-            Click to view
-            <i class="fas fa-angle-double-down"></i>
-          </div>
-        </div>
-        <div class="box">
-          <figure class="image is-3by2">
-            <img src="{{ "assets/media/undraw_content_creator_xeju.svg" | asset }}">
-          </figure>
-          <h4 class="header-4 has-text-centered">
-            Personal Blog
-          </h4>
-        </div>
-      </div>
+    {% include 'blocks/previewCard.peb' with {'title': 'Personal Blog', 'mediaFile': 'undraw_content_creator_xeju.svg'} %}
     </div>
-
     <div class="getting-started-card">
-      <div class="card-container">
-        <div class="box card-shadow">
-          <div class="shadow-text">
-            Click to view
-            <i class="fas fa-angle-double-down"></i>
-          </div>
-        </div>
-        <div class="box">
-          <figure class="image is-3by2">
-            <img src="{{ "assets/media/undraw_code_review_l1q9.svg" | asset }}">
-          </figure>
-          <h4 class="header-4 has-text-centered">
-            Code Documentation
-          </h4>
-        </div>
-      </div>
+    {% include 'blocks/previewCard.peb' with {'title': 'Code Documentation', 'mediaFile': 'undraw_code_review_l1q9.svg'} %}
     </div>
 
   </div>
@@ -113,97 +50,65 @@
 
 <section class="section has-background-light biko bg-image has-height-4" style="background: url('{{ "assets/media/undraw_maker_launch_crhe.svg"|asset }}');">
   <div class="container">
-    <h2 class="header-2 has-text-centered">
-      Features
-    </h2>
-    <h3 class="header-4 has-text-centered">
-      Everything you need to author, build, and deploy <wbr> JAMstack sites, top-soil included
-    </h3>
+    <h2 class="header-2 has-text-centered">Features</h2>
+    <h3 class="header-4 has-text-centered">Everything you need to author, build, and deploy<wbr> JAMstack sites, top-soil included</h3>
   </div>
 </section>
 
-<section class="section has-background-light biko">
+<section class="section has-background-light blokk">
   <div class="container">
+
     <div class="section has-text-left">
-      <div class="content blokk">
-        <h4 class="header-4">
-          Mauris pulvinar leo enim
-        </h4>
-        <p>
-          Mauris pulvinar leo enim, ut tincidunt odio suscipit quis. Phasellus augue finibus consequat.
-        </p>
+      <div class="content">
+        <h4 class="header-4">Mauris pulvinar leo enim</h4>
+        <p>Mauris pulvinar leo enim, ut tincidunt odio suscipit quis. Phasellus augue finibus consequat.</p>
       </div>
     </div>
 
     <div class="section has-text-left">
-      <div class="content blokk">
-        <h4 class="header-4">
-          Mauris pulvinar leo enim
-        </h4>
-        <p>
-          Mauris pulvinar leo enim, ut tincidunt odio suscipit quis. Phasellus augue finibus consequat.
-        </p>
+      <div class="content">
+        <h4 class="header-4">Mauris pulvinar leo enim</h4>
+        <p>Mauris pulvinar leo enim, ut tincidunt odio suscipit quis. Phasellus augue finibus consequat.</p>
       </div>
     </div>
 
     <div class="section has-text-left">
-      <div class="content blokk">
-        <h4 class="header-4">
-          Mauris pulvinar leo enim
-        </h4>
-        <p>
-          Mauris pulvinar leo enim, ut tincidunt odio suscipit quis. Phasellus augue finibus consequat.
-        </p>
+      <div class="content">
+        <h4 class="header-4">Mauris pulvinar leo enim</h4>
+        <p>Mauris pulvinar leo enim, ut tincidunt odio suscipit quis. Phasellus augue finibus consequat.</p>
       </div>
     </div>
 
     <div class="section has-text-left">
-      <div class="content blokk">
-        <h4 class="header-4">
-          Mauris pulvinar leo enim
-        </h4>
-        <p>
-          Mauris pulvinar leo enim, ut tincidunt odio suscipit quis. Phasellus augue finibus consequat.
-        </p>
+      <div class="content">
+        <h4 class="header-4">Mauris pulvinar leo enim</h4>
+        <p>Mauris pulvinar leo enim, ut tincidunt odio suscipit quis. Phasellus augue finibus consequat.</p>
       </div>
     </div>
 
   </div>
 </section>
 
-<section class="section has-background-primary biko">
+<section class="section has-background-primary">
   <div class="container">
-    <h2 class="header-2 has-text-centered">
-      Get Connected
-    </h2>
+    <h2 class="header-2 has-text-centered">Get Connected</h2>
 
     <div class="content has-text-centered">
       <p>
-        <button class="button is-important is-outlined is-rounded">
-          Chat on Gitter
-        </button>
-        <button class="button is-important is-outlined is-rounded">
-          Follow on Twitter
-        </button>
+        <button class="button is-important is-outlined is-rounded">Chat on Gitter</button>
+        <button class="button is-important is-outlined is-rounded">Follow on Twitter</button>
       </p>
       <p>
-        <button class="button is-important is-rounded">
-          Become a backer on OpenCollective
-        </button>
+        <button class="button is-important is-rounded">Become a backer on OpenCollective</button>
       </p>
     </div>
   </div>
 </section>
 
-<footer class="footer has-background-black biko">
-  <div class="container">
-    <div class="is-clearfix">
-      <div class="is-pulled-left">
-        &copy; 2017-{{ 'now'|localDate('yyyy') }} Orchid
-      </div>
-      <div class="is-pulled-right">
-        <a href="https://github.com/JavaEden/Orchid"><i class="fab fa-github"></i> JavaEden/Orchid</a>
-      </div>
+<footer class="footer has-background-black is-paddingless" style="background-color: hsl(0, 0%, 16%) !important;">
+  <div class="section">
+    <div class="container">
+    {% include 'includes/footer.peb' %}
     </div>
   </div>
 </footer>

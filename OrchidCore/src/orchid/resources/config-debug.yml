@@ -12,13 +12,13 @@ services:
       - 'javadoc'
       - 'kotlindoc'
       - 'netlifyCms'
-      - 'pages'
+#      - 'pages'
       - 'posts'
       - 'presentations'
       - 'sitemap'
       - 'styleguide'
       - 'swiftdoc'
-      - 'taxonomies'
+#      - 'taxonomies'
 
 wiki:
   sections:

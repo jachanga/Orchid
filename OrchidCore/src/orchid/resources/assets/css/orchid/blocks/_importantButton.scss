@@ -1,0 +1,22 @@
+
+// Important (round) button
+.button.is-important {
+  @include horizontal-gradient($color_primary, lighten($color_primary, 25%));
+  border: none;
+  color: inherit;
+  &.is-outlined {
+    border: thin solid rgba(255, 255, 255, 0.75);
+    background: none;
+    &:hover {
+      border: thin solid rgba(255, 255, 255, 1);
+    }
+  }
+}
+
+@each $breakpoint in 'normal', 'desktop', 'mobile' {
+  @include responsiveBlock($breakpoint) {
+    .button.is-important {
+      font-size: responsiveSize($importantButtonTextSize, $breakpoint);
+    }
+  }
+}

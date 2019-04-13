@@ -1,7 +1,16 @@
-<p>
-  &copy;2017-{{ 'now'|localDate('yyyy') }} Copper Leaf. Currently version {{ site.version }}.
-</p>
-<p>
+<div class="is-clearfix">
+  <div class="is-pulled-left">
+    &copy; 2017-{{ 'now'|localDate('yyyy') }} Orchid
+  </div>
+  <div class="is-pulled-right">
+    <a href="https://github.com/JavaEden/Orchid"><i class="fab fa-github"></i> JavaEden/Orchid</a>
+  </div>
+  <div class="is-pulled-right" style="margin-right: 10px;">
+    <a href="https://twitter.com/OrchidSSG"><i class="fab fa-twitter"></i> @OrchidSSG</a>
+  </div>
+</div>
+
+<p style="margin-bottom: 2rem;">
   Site proudly built with <a href="https://orchid.netlify.com/">Orchid</a>.<br>
 </p>
 <p>

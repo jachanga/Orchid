@@ -1,0 +1,53 @@
+
+@import '/assets/css/orchid/variables';
+@import '/assets/css/orchid/functions';
+
+// Default
+html.homepage {
+  overflow: auto !important;
+}
+
+@each $breakpoint in 'normal', 'desktop', 'mobile' {
+  @include responsiveBlock($breakpoint) {
+    .header-1 { font-size: responsiveSize($h1Size, $breakpoint); }
+    .header-2 { font-size: responsiveSize($h2Size, $breakpoint); }
+    .header-3 { font-size: responsiveSize($h3Size, $breakpoint); }
+    .header-4 { font-size: responsiveSize($h4Size, $breakpoint); }
+    html.homepage body {
+      font-size: responsiveSize($bodyTextSize, $breakpoint);
+    }
+    .button.is-important {
+      font-size: responsiveSize($importantButtonTextSize, $breakpoint);
+    }
+    .section.bg-image {
+      background-size: responsiveSize($bgImageSize, $breakpoint) !important;
+      background-position: 50% responsiveSize($bgImageOffset, $breakpoint) !important;
+      height: responsiveSize($bgImageHeight, $breakpoint);
+    }
+
+    .getting-started-card {
+      width: 50%;
+      margin: responsiveSize(0, $breakpoint) auto;
+      padding: responsiveSize(4, $breakpoint) 0;
+    }
+  }
+}
+
+// Components
+//----------------------------------------------------------------------------------------------------------------------
+
+@import '/assets/css/orchid/blocks/importantButton';
+@import '/assets/css/orchid/blocks/previewCard';
+@import '/assets/css/orchid/blocks/footer';
+
+.has-background-light {
+  color: #444444;
+}
+.has-background-dark, .has-background-primary, .has-background-black {
+  color: #ffffff;
+}
+.section.bg-image {
+  background-repeat: no-repeat !important;
+}
+
+

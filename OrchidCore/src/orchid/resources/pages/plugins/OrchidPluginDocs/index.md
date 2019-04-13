@@ -5,6 +5,10 @@ images:
   - src: https://res.cloudinary.com/orchid/image/upload/c_scale,w_300,e_blur:150/v1524974694/plugins/plugindocs.jpg
     alt: Plugin Docs
     caption: Photo by Daniel McCullough on Unsplash
+tags:
+    - docs
+    - cms
+    - components
 ---
 
 ### Documenting your Orchid Plugin

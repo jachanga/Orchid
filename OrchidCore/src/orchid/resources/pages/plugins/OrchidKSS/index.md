@@ -5,6 +5,8 @@ images:
   - src: https://res.cloudinary.com/orchid/image/upload/c_scale,w_300,e_blur:150/v1524974377/plugins/styleguide.jpg
     alt: KSS Styleguide
     caption: Photo by Jan Losert on Unsplash
+tags:
+    - docs
 ---
 
 ### Using Orchid KSS

@@ -21,6 +21,6 @@
     }
 }
 
-.blokk {
-    font-family: "BLOKK", "Gill Sans", "Gill Sans MT", Calibri, sans-serif;
+.blokk, .blokk * {
+    font-family: "BLOKK", "Gill Sans", "Gill Sans MT", Calibri, sans-serif !important;
 }

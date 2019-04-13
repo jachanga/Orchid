@@ -1,52 +1,26 @@
-<div class="box">
-  <div style="position: relative;">
-    <h2 class="title is-1 is-spaced">{{ page.title }}</h2>
-    <p class="subtitle is-4">{{ page.description }}</p>
+<div>
 
-    {# desktop stuff #}
-    <div class="is-hidden-touch" style="position: absolute; top: 0; right: 0;">
-      <div>
-        <a href="https://github.com/JavaEden/Orchid">
-          <i class="fab fa-github" aria-hidden="true"></i>
-          <span>JavaEden/Orchid</span>
+  <div class="columns is-multiline is-centered" id="theme-list">
+    <div class="column is-half-desktop">
+    {% include 'blocks/previewCardControls.peb' with {
+    'mediaFile': 'undraw_creativity_wqmm.svg',
+    'items': page.pageList,
+    'id': 'theme-list'
+    } %}
+    </div>
+
+    {% for pageItem in page.pageList %}
+    {% set tagString = '' %}
+    {% for tag in pageItem.tags %}
+      {% set tagString = tagString~','~tag %}
+    {% endfor %}
+      <div class="column is-half-desktop" data-tags="{{ tagString }}" style="display: flex;">
+        <a href="{{ pageItem.link }}" style="text-align: center; flex-grow: 1; flex-shrink: 0; align-self: flex-end;">
+        {% set previewImage = pageItem.get('images')|first %}
+        {% include 'blocks/previewCard.peb' with {'title': pageItem.title, 'mediaUrl': previewImage.src, 'ctaName': 'Learn More'} %}
         </a>
       </div>
-    </div>
-
-    {# mobile sepcific stuff #}
-    <div class="is-hidden-desktop">
-      <a href="https://github.com/JavaEden/Orchid" style="margin-right: 12px; white-space: nowrap">
-        <i class="fab fa-github" aria-hidden="true"></i>
-        <span>JavaEden/Orchid</span>
-      </a>
-    </div>
-
-    <hr>
+    {% endfor %}
   </div>
 
-  <div class="content is-medium">
-
-  </div>
 </div>
-
-
-
-<div class="columns is-multiline is-centered">
-{% for pageItem in page.pageList %}
-  <div class="column is-half-desktop is-one-third-widescreen is-one-quarter-fullhd">
-
-    <div class="box is-paddingless">
-      <div class="border-bottom" style="padding: 0.75rem 1.25rem; margin-bottom: 0.75rem;">
-        <h2 class="subtitle" style="white-space: nowrap;">{{ pageItem.title }}</h2>
-      </div>
-      <figure class="image image is-3by2">
-        {% set previewImage = pageItem.get('images')|first %}
-        <img src="{{ previewImage.src }}" alt="{{ pageItem.title }}" title="{{ pageItem.title }}" style="border-radius: 0 0 6px 6px;">
-      </figure>
-    </div>
-
-  </div>
-{% endfor %}
-</div>
-
-

@@ -23,10 +23,13 @@ theme:
     - type: 'wikiSections'
     - type: 'page'
       itemId: 'Changelog'
-  sidebarBackground: 'primary'
+  sidebarBackground: 'black'
   sidebarBackgroundType: GRADIENT
+  sidebarShadow: false
+  useBackgroundTexture: false
   colors:
     purple: '#7E83C4'
+    black: '#444444'
   palette:
     primary: 'PURPLE'
     link: 'BLUE'
@@ -54,6 +57,11 @@ kotlindoc:
 allPages:
   extraCss:
     - 'assets/css/plugins.scss'
+    - 'assets/font/Biko-Black/styles.css'
+    - 'assets/font/BLOKKNeue-Regular/styles.css'
+    - 'assets/css/extras.scss'
+  extraJs:
+    - "assets/js/simpleFilter.js"
   components:
     - type: "pageContent"
     - type: "prism"

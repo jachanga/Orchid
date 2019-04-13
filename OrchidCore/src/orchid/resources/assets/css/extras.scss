@@ -1,24 +1,8 @@
-.row.panel-row {
-  display: flex;
-  flex-wrap: wrap;
-  align-items: stretch;
 
-  .col {
-    display: flex;
+@import '/assets/css/orchid/variables';
+@import '/assets/css/orchid/functions';
+@import '/assets/css/orchid/blocks/previewCard';
 
-    .panel {
-      flex-grow: 1;
-      display: flex;
-      flex-direction: column;
-
-      .panel-body {
-        display: flex;
-        flex-direction: column;
-
-        > * {
-          display: flex;
-        }
-      }
-    }
-  }
+h1, h2, h3, h4 {
+  font-family: "Biko-Black", "Gill Sans", "Gill Sans MT", Calibri, sans-serif;
 }

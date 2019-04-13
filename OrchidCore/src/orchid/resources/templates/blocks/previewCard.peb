@@ -1,0 +1,21 @@
+<div class="preview-card">
+  <div class="card-container">
+    <div class="card-shadow">
+      <div class="shadow-text">
+        {{ ctaName|default('Click to view') }}
+        <i class="fas fa-angle-double-down"></i>
+      </div>
+    </div>
+    <div class="card-content">
+      <figure class="image is-3by2">
+        {% if mediaFile is not empty %}
+          <img src="{{ "assets/media/"~mediaFile | asset }}">
+        {% elseif mediaUrl is not empty %}
+          <img src="{{ mediaUrl }}">
+        {% endif %}
+        <!-- Image courtesy of unDraw (https://undraw.co/license) -->
+      </figure>
+      <h4 class="header-4 has-text-centered">{{ title }}</h4>
+    </div>
+  </div>
+</div>

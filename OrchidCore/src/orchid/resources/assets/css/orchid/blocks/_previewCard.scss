@@ -1,0 +1,161 @@
+// getting started cards
+.preview-card {
+  text-align: center;
+  flex-grow: 1;
+  flex-shrink: 0;
+  align-self: flex-end;
+
+  .card-container {
+    position: relative;
+    display: inline-block;
+    cursor: pointer;
+  }
+
+  .card-shadow, .card-content {
+    width: 100%;
+    height: 100%;
+    padding: 1.25rem 10%;
+    z-index: 10;
+    position: relative;
+    display: block;
+    transition: transform 0.15s;
+    transform: translate(0, 0);
+    border-radius: 6px;
+    box-shadow: 0 2px 3px rgba(68, 68, 68, 0.1), 0 0 0 1px rgba(68, 68, 68, 0.1);
+  }
+
+  .card-shadow {
+    z-index: 5;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: $color_primary;
+    color: white;
+    display: flex;
+    flex-direction: row;
+
+    .shadow-text {
+      align-self: flex-end;
+      flex-grow: 1;
+      flex-shrink: 0;
+    }
+  }
+
+  .card-content {
+    background-color: #ffffff;
+    color: #4a4a4a;
+
+    figure.image {
+      margin-bottom: 3rem;
+    }
+  }
+}
+
+html.homepage .preview-card {
+  @each $breakpoint in 'normal', 'desktop', 'mobile' {
+    @include responsiveBlock($breakpoint) {
+      .preview-card {
+        padding: responsiveSize(8, $breakpoint) 0 0 0;
+
+        .card-container {
+          width: responsiveSize(45, $breakpoint);
+
+          &:hover, &.mock-hover {
+            .card-shadow {
+              transform: translate(responsiveSize(-1, $breakpoint), responsiveSize(-1, $breakpoint)) rotate(-2deg);
+            }
+
+            .card-content {
+              transform: translate(responsiveSize(-10, $breakpoint), responsiveSize(-10, $breakpoint)) rotate(-20deg);
+            }
+          }
+        }
+
+        .card-shadow {
+          padding-bottom: responsiveSize(1.25, $breakpoint);
+
+          .shadow-text {
+            font-size: responsiveSize(2.5, $breakpoint);
+          }
+
+          svg {
+            margin-left: responsiveSize(0.25, $breakpoint);
+          }
+        }
+
+        .card-content {
+          figure.image {
+            margin-bottom: responsiveSize(3, $breakpoint);
+          }
+        }
+      }
+    }
+  }
+
+  // Mobile only, keep cards in their hover state
+  @media screen and (max-width: #{$breakpoint_mobile}px) {
+    .preview-card {
+      padding: mobileSize(10) 0 0 0;
+
+      .card-container {
+        width: mobileSize(45);
+
+        &:hover, &.mock-hover {
+          .card-shadow {
+            transform: translate(mobileSize(-1), mobileSize(-1)) rotate(-4deg);
+          }
+
+          .card-content {
+            transform: translate(mobileSize(-6.6), mobileSize(-6.6)) rotate(-8deg);
+          }
+        }
+      }
+
+      .card-shadow {
+        transform: translate(mobileSize(-1), mobileSize(-1)) rotate(-4deg);
+      }
+
+      .card-content {
+        transform: translate(mobileSize(-6.6), mobileSize(-6.6)) rotate(-8deg);
+      }
+    }
+  }
+}
+
+$breakpoint: 'desktop';
+
+.preview-card {
+  .card-container {
+    width: 100%;
+
+    &:hover, &.mock-hover {
+      .card-shadow {
+        transform: translate(responsiveSize(-1, $breakpoint), responsiveSize(-1, $breakpoint)) rotate(-2deg);
+      }
+
+      .card-content {
+        transform: translate(responsiveSize(-10, $breakpoint), responsiveSize(-10, $breakpoint)) rotate(-20deg);
+      }
+    }
+  }
+
+  .card-shadow {
+    padding-bottom: responsiveSize(1.25, $breakpoint);
+
+    .shadow-text {
+      font-size: responsiveSize(2.5, $breakpoint);
+    }
+
+    svg {
+      margin-left: responsiveSize(0.25, $breakpoint);
+    }
+  }
+
+  .card-content {
+    figure.image {
+      margin-bottom: responsiveSize(3, $breakpoint);
+    }
+  }
+}

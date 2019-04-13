@@ -1,2 +1,5 @@
 ---
+tags:
+    - wiki
+    - publication
 ---
